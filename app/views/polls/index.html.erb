@@ -1,5 +1,11 @@
 Welcome to Pollester app
 please click <%= link_to "here", new_poll_path%> to create new poll 
+<%if @poll%>
+	<%= @poll.name %>
+	<%@poll.questions.each do |q|%>
+		<%=q%> 
+	<%end%>
+<%end%>
 
 <% if flash[:message] %>
   <p class="notice"><%= flash[:message] %></p>

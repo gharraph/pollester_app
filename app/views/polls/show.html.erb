@@ -1,1 +1,4 @@
 Poll <%= link_to @poll.name, edit_poll_path(@poll.link)%>
+<%@poll.questions.each do |q|%>
+	<p>Question: <%=q.question%></p>
+<%end%>

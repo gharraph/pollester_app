@@ -1,8 +1,11 @@
 PollesterApp::Application.routes.draw do
-  resources :polls, :except => [:show, :edit]
+  resources :polls, :except => [:show, :edit] do
+    resources :questions
+  end
   match '/:link/edit' => 'polls#edit', :as => 'edit_poll'
   get '/:link' => 'polls#show', :as => 'poll'
   put '/:link' => 'polls#update', :as => 'update_poll'
+  
   
   root :to => 'polls#index'
 end

@@ -6,9 +6,10 @@ class PollsController < ApplicationController
   def create
     rand_link_rep = SecureRandom.base64(8).gsub(/\W/, '')
     @poll = Poll.create(:name => params[:poll][:name], :link => rand_link_rep)
-    flash[:message]  = "Poll is created successfully. 
-    if you like to edit your poll please do through this link : #{poll_url(@poll.link)}"
-    redirect_to root_path
+    # flash[:message]  = "Poll is created successfully. 
+    #      if you like to edit your poll please do through this link : #{poll_url(@poll.link)}"
+    redirect_to new_poll_question_path(@poll)
+    # redirect_to root_path
   end
   
   def show
