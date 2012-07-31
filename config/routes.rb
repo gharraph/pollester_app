@@ -1,5 +1,9 @@
 PollesterApp::Application.routes.draw do
-  resources :polls
+  resources :polls, :except => [:show, :edit]
+  match '/:link/edit' => 'polls#edit', :as => 'edit_poll'
+  get '/:link' => 'polls#show', :as => 'poll'
+  put '/:link' => 'polls#update', :as => 'update_poll'
+  
   root :to => 'polls#index'
 end
   # The priority is based upon order of creation:

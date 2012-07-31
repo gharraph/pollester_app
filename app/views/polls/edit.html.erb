@@ -1,0 +1,8 @@
+<%= form_for @poll, :url => "/polls/#{@poll.link}", :html => {:method => :put} do |f|%>
+	<%= f.label :name, "Poll's name"%>
+	<%= f.text_field :name%>
+	<p>
+	<%= f.submit "Submit" %>
+	</p>
+<%end%>
+

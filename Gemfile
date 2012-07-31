@@ -43,3 +43,4 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "twitter-bootstrap-rails"
+gem "friendly_id", "~> 4.0.0.beta8"
