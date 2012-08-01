@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 	gem 'jquery-rails'
-  gem 'sqlite3'
+  
   gem 'rails', '3.2.7'
 
 group :development, :test do
   gem "twitter-bootstrap-rails"
   gem "quiet_assets", "~> 1.0.1"
   gem "rspec-rails"	
+  gem 'sqlite3'
 end
 
 group :production do
