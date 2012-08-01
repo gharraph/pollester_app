@@ -1,4 +1,12 @@
-Poll <%= link_to @poll.name, edit_poll_path(@poll.link)%>
-<%@poll.questions.each do |q|%>
-	<p>Question: <%=q.question%></p>
+<h1>
+Poll <%= @poll.name %>
+<%= link_to "Edit poll", edit_poll_path(@poll.link), :class => "btn btn-primary"%>
+</h1></br>
+<% @poll.questions.each do |q| %>
+	<p>
+		Question: <%= q.question %>
+		<%= link_to "edit", edit_poll_question_path(@poll.link, q.id), :class => "btn btn-mini btn-primary"%>
+		<%= link_to "delete", poll_question_path(@poll.link, q.id), :method => :delete, :class => "btn btn-mini btn-danger"%>
+	</p>
+	
 <%end%>

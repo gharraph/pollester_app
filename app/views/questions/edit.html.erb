@@ -1,0 +1,7 @@
+<%= form_for [@poll, @question] do |f|%>
+	<%= f.label :question, "Question"%>
+	<%= f.text_field :question%>
+	<p>
+	<%= f.submit "Save" %>
+	</p>
+<%end%>
