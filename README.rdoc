@@ -1,7 +1,8 @@
 == Welcome to Pollester	
 This app is made by Sherief Gharraph. in this app you can build poll with questions, check responses from poll takers.
 
-== need to finish the following:
+== Unfinished business:
+Need to compete:
 Iteration 4: People taking the poll
 
 As a poll taker, I should see the list of questions when I visit the poll page
